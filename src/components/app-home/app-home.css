@@ -4,7 +4,6 @@
 }
 .aa-wrapper {
   width: 300px;
-  cursor: pointer;
 }
 .title {
   color: #333;
@@ -19,7 +18,7 @@
   font-size: 16px;
 }
 .msg {
-  text-align: right;
+  width: 100%;
   color: red;
 }
 @media screen and (max-width: 414px) {

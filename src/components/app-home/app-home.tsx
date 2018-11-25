@@ -1,6 +1,6 @@
 import { Component, Element, State } from "@stencil/core";
 import { FontsProvider, Font } from "../../providers/fonts";
-import { getAA } from "../../helpers/utils";
+import { getAA, setMetaTags } from "../../helpers/utils";
 
 @Component({
   tag: "app-home",
@@ -14,6 +14,7 @@ export class AppHome {
   async componentWillLoad() {
     this.aa = getAA();
     this.fontsMetaData = await FontsProvider.fetchFontsData();
+    setMetaTags();
   }
 
   async toPage(id: number = 0) {
@@ -41,10 +42,7 @@ export class AppHome {
               let list = [];
               for (let font of this.fontsMetaData) {
                 list.push(
-                  <div
-                    class="aa-wrapper u-mt12 u-mlr8 u-mb4"
-                    onClick={() => this.toPage(font.id)}
-                  >
+                  <div class="aa-wrapper u-mt12 u-mlr8 u-mb4">
                     <div class="u-divider u-mt12" />
                     <ion-button
                       href={"font/" + font.id}
@@ -55,8 +53,16 @@ export class AppHome {
                     >
                       {font.name}
                     </ion-button>
-                    <div class={`${font.name} aa u-ml24 u-pb20 `}>{this.aa}</div>
-                    <div class="u-mr20 msg">詳細をみる</div>
+                    <div class={`${font.name} aa u-ml24 u-pb20 `}>
+                      {this.aa}
+                    </div>
+                    <ion-button
+                      href={"font/" + font.id}
+                      fill="clear"
+                      class="msg"
+                    >
+                      詳細をみる
+                    </ion-button>
                   </div>
                 );
               }

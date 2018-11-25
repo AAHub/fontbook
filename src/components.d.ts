@@ -25,6 +25,13 @@ export namespace Components {
 
   interface AppRoot {}
   interface AppRootAttributes extends StencilHTMLAttributes {}
+
+  interface HighlightCodeLine {
+    'lines'?: string;
+  }
+  interface HighlightCodeLineAttributes extends StencilHTMLAttributes {
+    'lines'?: string;
+  }
 }
 
 declare global {
@@ -32,12 +39,14 @@ declare global {
     'AppFont': Components.AppFont;
     'AppHome': Components.AppHome;
     'AppRoot': Components.AppRoot;
+    'HighlightCodeLine': Components.HighlightCodeLine;
   }
 
   interface StencilIntrinsicElements {
     'app-font': Components.AppFontAttributes;
     'app-home': Components.AppHomeAttributes;
     'app-root': Components.AppRootAttributes;
+    'highlight-code-line': Components.HighlightCodeLineAttributes;
   }
 
 
@@ -59,16 +68,24 @@ declare global {
     new (): HTMLAppRootElement;
   };
 
+  interface HTMLHighlightCodeLineElement extends Components.HighlightCodeLine, HTMLStencilElement {}
+  var HTMLHighlightCodeLineElement: {
+    prototype: HTMLHighlightCodeLineElement;
+    new (): HTMLHighlightCodeLineElement;
+  };
+
   interface HTMLElementTagNameMap {
     'app-font': HTMLAppFontElement
     'app-home': HTMLAppHomeElement
     'app-root': HTMLAppRootElement
+    'highlight-code-line': HTMLHighlightCodeLineElement
   }
 
   interface ElementTagNameMap {
     'app-font': HTMLAppFontElement;
     'app-home': HTMLAppHomeElement;
     'app-root': HTMLAppRootElement;
+    'highlight-code-line': HTMLHighlightCodeLineElement;
   }
 
 
