@@ -73,7 +73,7 @@ export class AppFont {
         <div class="u-divider u-mt28" />
         <ion-button
           fill="clear"
-          class="u-mt20"
+          class="u-mt20 ev-copy"
           size="small"
           color="dark"
           onClick={() => this.copy()}
