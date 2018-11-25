@@ -1,0 +1,34 @@
+{
+  "fonts": [
+    {
+      "id": 1,
+      "enable":true,
+      "name": "aahub"
+    },
+    {
+      "id": 2,
+      "enable":true,
+      "name": "aahub_light"
+    },
+    {
+      "id": 3,
+      "enable":false,
+      "name": "ipagp"
+    },
+    {
+      "id": 4,
+      "enable":false,
+      "name": "mona"
+    },
+    {
+      "id": 5,
+      "enable":true,
+      "name": "monapo"
+    },
+    {
+      "id": 6,
+      "enable":true,
+      "name": "Saitamaar"
+    }
+  ]
+}

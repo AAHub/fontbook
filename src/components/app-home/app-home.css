@@ -1,0 +1,29 @@
+.font-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.aa-wrapper {
+  width: 300px;
+  cursor: pointer;
+}
+.title {
+  color: #333;
+  font-size: 12px;
+}
+.font-length {
+  font-weight: bold;
+  color: red;
+}
+.font-name {
+  font-weight: bold;
+  font-size: 16px;
+}
+.msg {
+  text-align: right;
+  color: red;
+}
+@media screen and (max-width: 414px) {
+  .aa-wrapper {
+    width: 90%;
+  }
+}
