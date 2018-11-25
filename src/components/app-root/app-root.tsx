@@ -20,9 +20,9 @@ export class AppRoot {
   @Listen('window:swUpdate')
   async onSWUpdate() {
     const toast = await this.toastCtrl.create({
-      message: 'New version available',
+      message: "新しいバージョンがあります",
       showCloseButton: true,
-      closeButtonText: 'Reload'
+      closeButtonText: "更新"
     });
     await toast.present();
     await toast.onWillDismiss();
