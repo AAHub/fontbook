@@ -62,3 +62,43 @@ export const getHTML = (name: string = "") => {
   const css: string = `<link href="${BASE_URL}assets/css/${name}.css" rel="stylesheet">`;
   return css;
 };
+
+export const platformIs = (platform: string = "") => {
+  var ua = navigator.userAgent;
+
+  if (
+    ua.indexOf("iPhone") > 0 ||
+    (ua.indexOf("Android") > 0 && ua.indexOf("Mobile") > 0)
+  ) {
+    // スマートフォン
+    if (ua.indexOf("iPhone") > 0) {
+      // iPhone
+      if (platform == "ios") {
+        return true;
+      }
+    }
+    if (ua.indexOf("Android") > 0) {
+      if (platform == "android") {
+        return true;
+      }
+    } // Android
+  } else if (ua.indexOf("iPad") > 0 || ua.indexOf("Android") > 0) {
+    // タブレット
+    if (ua.indexOf("iPad") > 0) {
+      if (platform == "ios") {
+        return true;
+      }
+    } // iPad
+    if (ua.indexOf("Android") > 0) {
+      if (platform == "android") {
+        return true;
+      }
+    } // Android
+  } else {
+    // PC用コード
+    if (platform == "pc") {
+      return true;
+    }
+  }
+  return false;
+};

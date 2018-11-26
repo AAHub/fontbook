@@ -1,12 +1,15 @@
-import { Component, Prop, Listen } from '@stencil/core';
+import { Component, State, Prop, Listen } from "@stencil/core";
+import { platformIs } from "../../helpers/utils";
 
 @Component({
-  tag: 'app-root',
-  styleUrl: 'app-root.css'
+  tag: "app-root",
+  styleUrl: "app-root.css"
 })
 export class AppRoot {
+  @State() swipe: boolean = false;
 
-  @Prop({ connect: 'ion-toast-controller' }) toastCtrl: HTMLIonToastControllerElement;
+  @Prop({ connect: "ion-toast-controller" })
+  toastCtrl: HTMLIonToastControllerElement;
 
   /**
    * Handle service worker updates correctly.
@@ -17,7 +20,7 @@ export class AppRoot {
    * so that the new service worker can take over
    * and serve the fresh content
    */
-  @Listen('window:swUpdate')
+  @Listen("window:swUpdate")
   async onSWUpdate() {
     const toast = await this.toastCtrl.create({
       message: "新しいバージョンがあります",
@@ -28,6 +31,11 @@ export class AppRoot {
     await toast.onWillDismiss();
     window.location.reload();
   }
+  componentWillLoad() {
+    if (platformIs("ios") || platformIs("android")) {
+      this.swipe = true;
+    }
+  }
 
   render() {
     return (
@@ -36,7 +44,7 @@ export class AppRoot {
           <ion-route url="/" component="app-home" />
           <ion-route url="/font/:id" component="app-font" />
         </ion-router>
-        <ion-nav swipeGesture={false} animated={false}/>
+        <ion-nav swipeGesture={this.swipe} animated={false} />
       </ion-app>
     );
   }
