@@ -1,6 +1,12 @@
 import { Component, Prop, State } from "@stencil/core";
 import { FontsProvider, Font } from "../../providers/fonts";
-import { getAA, getCSS, execCopy, setMetaTags } from "../../helpers/utils";
+import {
+  getAA,
+  getCSS,
+  getHTML,
+  execCopy,
+  setMetaTags
+} from "../../helpers/utils";
 import Prism from "prismjs";
 
 @Component({
@@ -11,14 +17,17 @@ export class AppFont {
   @Prop() id: string;
   @State() font: Font;
   @State() css: string = "";
+  @State() html: string = "";
   @State() aa: string = "";
-  @State() copied: boolean = false;
+  @State() copied_css: boolean = false;
+  @State() copied_html: boolean = false;
 
   async componentWillLoad() {
     this.aa = getAA();
     const id = Number(this.id);
     this.font = await FontsProvider.getFontsDataById(id);
     this.css = getCSS(this.font.name);
+    this.html = getHTML(this.font.name);
     setMetaTags(this.font.name);
   }
 
@@ -26,18 +35,23 @@ export class AppFont {
     setMetaTags();
   }
 
-  async copy() {
+  async copyCSS() {
     execCopy(this.css);
-    this.copied = true;
+    this.copied_css = true;
+  }
+
+  async copyHTML() {
+    execCopy(this.html);
+    this.copied_html = true;
   }
 
   highlight(code: string, lang?: string) {
     return Prism.highlight(code, Prism.languages[lang]);
   }
 
-  render() {
+  genCode(src: string) {
     const hcl = [];
-    let code = this.css
+    let code = src
       .split("\n")
       .map((line, index) => {
         if (line.charAt(0) === "|") {
@@ -54,6 +68,19 @@ export class AppFont {
       escaped = true;
       code = out;
     }
+    return [hcl, code, escaped];
+  }
+
+  render() {
+    let css = this.genCode(this.css);
+    const hcl: any = css[0];
+    const code: any = css[1];
+    const escaped: any = css[2];
+
+    let html = this.genCode(this.html);
+    const hcl2: any = html[0];
+    const code2: any = html[1];
+    const escaped2: any = html[2];
 
     return [
       <ion-header>
@@ -71,23 +98,45 @@ export class AppFont {
           <div class={`${this.font.name} aa`}>{this.aa}</div>
         </div>
         <div class="u-divider u-mt28" />
-        <ion-button
-          fill="clear"
-          class="u-mt20 ev-copy"
-          size="small"
-          color="dark"
-          onClick={() => this.copy()}
-        >
-          {this.copied ? "CSSをコピーしました" : "CSSをコピーする"}
-        </ion-button>
-        <highlight-code-line lines={hcl.join()}>
-          <pre class="language-css">
-            <code
-              class="language-css"
-              innerHTML={escaped ? code : escape(code)}
-            />
-          </pre>
-        </highlight-code-line>
+        <div class="html">
+          <ion-button
+            fill="clear"
+            class="u-mt20 ev-copy-html"
+            size="small"
+            color="dark"
+            onClick={() => this.copyHTML()}
+          >
+            {this.copied_html ? "HTMLをコピーしました" : "HTMLをコピーする"}
+          </ion-button>
+          <highlight-code-line lines={hcl2.join()}>
+            <pre class="language-css">
+              <code
+                class="language-css"
+                innerHTML={escaped2 ? code2 : escape(code2)}
+              />
+            </pre>
+          </highlight-code-line>
+        </div>
+        <div class="u-divider u-mt28" />
+        <div class="css">
+          <ion-button
+            fill="clear"
+            class="u-mt20 ev-copy-css"
+            size="small"
+            color="dark"
+            onClick={() => this.copyCSS()}
+          >
+            {this.copied_css ? "CSSをコピーしました" : "CSSをコピーする"}
+          </ion-button>
+          <highlight-code-line lines={hcl.join()}>
+            <pre class="language-css">
+              <code
+                class="language-css"
+                innerHTML={escaped ? code : escape(code)}
+              />
+            </pre>
+          </highlight-code-line>
+        </div>
       </ion-content>
     ];
   }

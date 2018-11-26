@@ -18,6 +18,7 @@
   font-size: 16px;
 }
 .msg {
+    text-align: right;
   width: 100%;
   color: red;
 }

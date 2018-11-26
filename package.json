@@ -19,5 +19,8 @@
     "@types/prismjs": "^1.9.0",
     "highlight.js": "^9.13.1",
     "prismjs": "^1.15.0"
+  },
+  "devDependencies": {
+    "workbox-build": "3.4.1"
   }
 }

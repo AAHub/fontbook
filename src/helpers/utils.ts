@@ -1,14 +1,20 @@
 export const BASE_URL = "https://fonts-aahub.netlify.com/";
 export const getAA = () => {
-  const aa: string = `　 　　　＿＿＿_
-　　　／　　 　 　＼
-　 ／　　─　 　 ─＼
-／ 　　 （●） 　（●） ＼
-|　 　　 　 （__人__）　 　 |
-./　　　　 ∩ノ ⊃　　／
-(　 ＼　／ ＿ノ　|　 |
-.＼　“　　／＿＿|　 |
-　　＼ ／＿＿＿ ／`;
+  const aa: string = `　　 　　　＿＿＿_
+  　　　／　　 　 　＼
+  　 ／　　─　 　 ─＼
+  ／ 　　 （●） 　（●） ＼
+  |　 　　 　 （__人__）　 　 |
+  ./　　　　 ∩ノ ⊃　　／
+  (　 ＼　／ ＿ノ　|　 |
+  .＼　“　　／＿＿|　 |
+  　　＼ ／＿＿＿ ／`;
+
+  //  const aa: string = `|　　　 ∧ ∧ 　 　 | 　　 　 ∧∧ 　 　 | 　　 ∧___∧　　　│　　　∧＿∧　　　 |
+  //|　　　 (*ﾟーﾟ)　　　|　　　　(,,ﾟДﾟ)　　　|　　 （ ´∀｀ ）　 　│　　 （・∀・ ,,）　　 │
+  //|　　 　 U　 |　　　│　　 　(i　　i).　 　 |　　 （　　 　 ） 　 　| 　　 （　　　　）　　 │
+  //| 　　～|　　|　　　│　　 ～|　　|　　　 | 　　 i　　 　 i 　 　 |　　　 |　｜ ｜ 　　 .|
+  //|　　　　Ｕ Ｕ　　　│　　　　し\`Ｊ 　 　│　　（,__,ﾊ,__,） 　 　| 　　 （＿（_＿） 　　 |`;
   return aa;
 };
 export const sayHello = () => {
@@ -50,4 +56,9 @@ export const setMetaTags = (title: string = "") => {
     title = title + " | ";
   }
   document.title = title + "AAHub Fonts";
+};
+
+export const getHTML = (name: string = "") => {
+  const css: string = `<link href="${BASE_URL}assets/css/${name}.css" rel="stylesheet">`;
+  return css;
 };

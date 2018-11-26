@@ -1,0 +1,14 @@
+@font-face {
+  font-family: "monapo";
+  src: url("https://fonts-aahub.netlify.com/assets/fonts/monapo/monapo.woff2") format("woff2"),
+    url("https://fonts-aahub.netlify.com/assets/fonts/monapo/monapo.woff") format("woff"),
+    url("https://fonts-aahub.netlify.com/assets/fonts/monapo/monapo.ttf") format("ttf");
+  font-display: swap;
+}
+
+.monapo {
+  font-family: "monapo";
+  white-space: pre;
+  font-size: 16px;
+  line-height: 16px;
+}
