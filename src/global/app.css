@@ -865,3 +865,17 @@
 .textar-min {
   font-family: "textar-min";
 }
+
+/*
+  ume-pgc4
+*/
+@font-face {
+  font-family: "ume-pgc4";
+  src: url("/assets/fonts/ume-pgc4/ume-pgc4.woff2") format("woff2"),
+    url("/assets/fonts/ume-pgc4/ume-pgc4.woff") format("woff"),
+    url("/assets/fonts/ume-pgc4/ume-pgc4.ttf") format("ttf");
+  font-display: swap;
+}
+.ume-pgc4 {
+  font-family: "ume-pgc4";
+}

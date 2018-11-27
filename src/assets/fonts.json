@@ -44,6 +44,11 @@
       "id": 9,
       "enable":true,
       "name": "textar-min"
+    },
+    {
+      "id": 10,
+      "enable":true,
+      "name": "ume-pgc4"
     }
   ]
   

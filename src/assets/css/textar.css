@@ -1,10 +1,10 @@
 @font-face {
-  font-family: "textar";
-  src: url("https://fonts-aahub.netlify.com/assets/fonts/textar/textar-Regular.woff2") format("woff2"),
-    url("https://fonts-aahub.netlify.com/assets/fonts/textar/textar-Regular.woff") format("woff"),
-    url("https://fonts-aahub.netlify.com/assets/fonts/textar/textar-Regular.ttf") format("ttf");
+  font-family: "ume-pgc4";
+  src: url("/assets/fonts/ume-pgc4/ume-pgc4.woff2") format("woff2"),
+    url("/assets/fonts/ume-pgc4/ume-pgc4.woff") format("woff"),
+    url("/assets/fonts/ume-pgc4/ume-pgc4.ttf") format("ttf");
   font-display: swap;
 }
-.textar {
-  font-family: "textar";
+.ume-pgc4 {
+  font-family: "ume-pgc4";
 }
