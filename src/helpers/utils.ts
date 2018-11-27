@@ -55,7 +55,7 @@ export const setMetaTags = (title: string = "") => {
   if (title != "") {
     title = title + " | ";
   }
-  document.title = title + "AAHub Fonts";
+  document.title = title + "AAHub Fonts - AA用フォント収集サイト";
 };
 
 export const getHTML = (name: string = "") => {

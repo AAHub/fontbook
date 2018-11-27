@@ -1,0 +1,10 @@
+@font-face {
+  font-family: "RobotoJAA";
+  src: url("https://fonts-aahub.netlify.com/assets/fonts/RobotoJAA/RobotoJAA-Regular.woff2") format("woff2"),
+    url("https://fonts-aahub.netlify.com/assets/fonts/RobotoJAA/RobotoJAA-Regular.woff") format("woff"),
+    url("https://fonts-aahub.netlify.com/assets/fonts/RobotoJAA/RobotoJAA-Regular.ttf") format("ttf");
+  font-display: swap;
+}
+.RobotoJAA {
+  font-family: "RobotoJAA";
+}

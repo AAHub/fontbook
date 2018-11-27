@@ -52,77 +52,6 @@
   https://beta.ionicframework.com/docs/theming/color-generator
 */
 
-@font-face {
-  font-family: "aahub_light";
-  src: url("/assets/fonts/aahub_light/aahub_light.woff2") format("woff2"),
-    url("/assets/fonts/aahub_light/aahub_light.woff") format("woff"),
-    url("/assets/fonts/aahub_light/aahub_light.ttf") format("ttf");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "aahub";
-  src: url("/assets/fonts/aahub/aahub.woff2") format("woff2"),
-    url("/assets/fonts/aahub/aahub.woff") format("woff"),
-    url("/assets/fonts/aahub/aahub.ttf") format("ttf");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "ipagp";
-  src: url("/assets/fonts/ipagp/ipagp.woff2") format("woff2"),
-    url("/assets/fonts/ipagp/ipagp.woff") format("woff"),
-    url("/assets/fonts/ipagp/ipagp.ttf") format("ttf");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "mona";
-  src: url("/assets/fonts/mona/mona.woff2") format("woff2"),
-    url("/assets/fonts/mona/mona.woff") format("woff"),
-    url("/assets/fonts/mona/mona.ttf") format("ttf");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "monapo";
-  src: url("/assets/fonts/monapo/monapo.woff2") format("woff2"),
-    url("/assets/fonts/monapo/monapo.woff") format("woff"),
-    url("/assets/fonts/monapo/monapo.ttf") format("ttf");
-  font-display: swap;
-}
-@font-face {
-  font-family: "Saitamaar";
-  src: url("/assets/fonts/Saitamaar/Saitamaar.woff2") format("woff2"),
-    url("/assets/fonts/Saitamaar/Saitamaar.woff") format("woff"),
-    url("/assets/fonts/Saitamaar/Saitamaar.ttf") format("ttf");
-  font-display: swap;
-}
-
-.aahub {
-  font-family: "aahub";
-}
-
-.aahub_light {
-  font-family: "aahub_light";
-}
-
-.ipagp {
-  font-family: "ipagp";
-}
-
-.mona {
-  font-family: "mona";
-}
-
-.monapo {
-  font-family: "monapo";
-}
-
-.Saitamaar {
-  font-family: "Saitamaar";
-}
-
 .aa {
   white-space: pre;
   font-size: 16px;
@@ -134,6 +63,21 @@
   border: none;
   height: 1px;
   width: 100%;
+}
+
+.footer {
+  text-align: center;
+  width: 100%;
+  margin-top: 50px;
+  color: #333;
+}
+.footer .description {
+  padding: 14px 0px;
+  color: #000;
+  font-size: 14px;
+}
+.footer .credit {
+  font-size: 12px;
 }
 
 .u-p0 {
@@ -796,202 +740,128 @@
   margin-left: 40px;
 }
 
-code {
-  font-weight: 400;
-  font-family: 'SFMono-Regular', 'Lucida Console', Monaco, monospace;
-  font-size: 14px;
-}
-
-ol code,
-ul code,
-p code,
-table code {
-  font-size: 14px;
-  padding: 2px 6px 3px;
-  background-color: var(--color-whisper);
-  color: var(--color-woodsmoke);
-  border-radius: 3px;
-}
-
-h1 code,
-h2 code,
-h3 code {
-  font-size: 0.8em;
-  font-weight: bold;
-}
-
-blockquote code {
-  font-size: 13px;
-  background-color: var(--color-wheatfield);
-}
-
-/**
-* xonokai theme for JavaScript, CSS and HTML
-* based on: https://github.com/MoOx/sass-prism-theme-base by Maxime Thirouin ~ MoOx --> http://moox.fr/ , which is Loosely based on Monokai textmate theme by http://www.monokai.nl/
-* license: MIT; http://moox.mit-license.org/
+/*
+  aahub_light
 */
-code[class*="language-"],
-pre[class*="language-"] {
-  -moz-tab-size: 2;
-  -o-tab-size: 2;
-  tab-size: 2;
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  -ms-hyphens: none;
-  hyphens: none;
-  white-space: normal;
-  word-wrap: normal;
-  font-size: 14px;
-  line-height: 20px;
-  color: #e4e4e4;
-  text-shadow: none;
+@font-face {
+  font-family: "aahub_light";
+  src: url("/assets/fonts/aahub_light/aahub_light.woff2") format("woff2"),
+    url("/assets/fonts/aahub_light/aahub_light.woff") format("woff"),
+    url("/assets/fonts/aahub_light/aahub_light.ttf") format("ttf");
+  font-display: swap;
+}
+.aahub_light {
+  font-family: "aahub_light";
 }
 
-pre[class*="language-"],
-:not(pre) > code[class*="language-"] {
-  background: #212431;
+/*
+  aahub
+*/
+@font-face {
+  font-family: "aahub";
+  src: url("/assets/fonts/aahub/aahub.woff2") format("woff2"),
+    url("/assets/fonts/aahub/aahub.woff") format("woff"),
+    url("/assets/fonts/aahub/aahub.ttf") format("ttf");
+  font-display: swap;
+}
+.aahub {
+  font-family: "aahub";
 }
 
-pre[class*="language-"] {
-
-  border-radius: 4px;
-  border: 1px solid #e1e1e8;
-  overflow: auto;
-  position: relative;
+/*
+  ipagp
+*/
+@font-face {
+  font-family: "ipagp";
+  src: url("/assets/fonts/ipagp/ipagp.woff2") format("woff2"),
+    url("/assets/fonts/ipagp/ipagp.woff") format("woff"),
+    url("/assets/fonts/ipagp/ipagp.ttf") format("ttf");
+  font-display: swap;
+}
+.ipagp {
+  font-family: "ipagp";
 }
 
-pre[class*="language-"] code {
-  white-space: pre;
-  display: block;
-  margin: 22px 24px !important;
-  display: block;
+/*
+  mona
+*/
+@font-face {
+  font-family: "mona";
+  src: url("/assets/fonts/mona/mona.woff2") format("woff2"),
+    url("/assets/fonts/mona/mona.woff") format("woff"),
+    url("/assets/fonts/mona/mona.ttf") format("ttf");
+  font-display: swap;
+}
+.mona {
+  font-family: "mona";
 }
 
-:not(pre) > code[class*="language-"] {
-  padding: 0.15em 0.2em 0.05em;
-  border-radius: .3em;
-  border: 0.13em solid #7a6652;
-  box-shadow: 1px 1px 0.3em -0.1em #000 inset;
+/*
+  monapo
+*/
+@font-face {
+  font-family: "monapo";
+  src: url("/assets/fonts/monapo/monapo.woff2") format("woff2"),
+    url("/assets/fonts/monapo/monapo.woff") format("woff"),
+    url("/assets/fonts/monapo/monapo.ttf") format("ttf");
+  font-display: swap;
+}
+.monapo {
+  font-family: "monapo";
 }
 
-/* Line highlight plugin */
-pre[class*="language-"] {
-  position: relative;
+/*
+  Saitamaar
+*/
+@font-face {
+  font-family: "Saitamaar";
+  src: url("/assets/fonts/Saitamaar/Saitamaar.woff2") format("woff2"),
+    url("/assets/fonts/Saitamaar/Saitamaar.woff") format("woff"),
+    url("/assets/fonts/Saitamaar/Saitamaar.ttf") format("ttf");
+  font-display: swap;
+}
+.Saitamaar {
+  font-family: "Saitamaar";
 }
 
-pre .line-highlight {
-  position: absolute;
-  left: 0;
-  right: 0;
-  padding: 0 0 0 22px;
-  background: rgba(86, 90, 101, 0.4);
+/*
+  RobotoJAA
+*/
+@font-face {
+  font-family: "RobotoJAA";
+  src: url("/assets/fonts/RobotoJAA/RobotoJAA-Regular.woff2") format("woff2"),
+    url("/assets/fonts/RobotoJAA/RobotoJAA-Regular.woff") format("woff"),
+    url("/assets/fonts/RobotoJAA/RobotoJAA-Regular.ttf") format("ttf");
+  font-display: swap;
+}
+.RobotoJAA {
+  font-family: "RobotoJAA";
 }
 
-.token.comment {
-  color: #5c6370;
-  font-style: italic;
+/*
+  textar
+*/
+@font-face {
+  font-family: "textar";
+  src: url("/assets/fonts/textar/textar.woff2") format("woff2"),
+    url("/assets/fonts/textar/textar.woff") format("woff"),
+    url("/assets/fonts/textar/textar.ttf") format("ttf");
+  font-display: swap;
+}
+.textar {
+  font-family: "textar";
 }
 
-.token.function {
-  color: #61aeee;
+/*
+  textar-min
+*/
+@font-face {
+  font-family: "textar-min";
+  src: url("/assets/fonts/textar-min/textar-min.woff2") format("woff2"),
+    url("/assets/fonts/textar-min/textar-min.woff") format("woff"),
+    url("/assets/fonts/textar-min/textar-min.ttf") format("ttf");
+  font-display: swap;
 }
-
-.token.class-name,
-.token.builtin {
-  color: #e6c07b;
-}
-
-.token.namespace {
-  opacity: .7;
-}
-
-.token.prolog,
-.token.doctype,
-.token.cdata {
-  color: #6f705e;
-}
-
-.token.boolean,
-.token.number {
-  color: #a77afe;
-}
-
-.token.string {
-  color: #98c379;
-}
-
-.token.entity,
-.token.url,
-.language-css .token.string,
-.style .token.string {
-  color: #e6d06c;
-}
-
-.token.selector,
-.token.inserted {
-  color: #a6e22d;
-}
-
-.token.atrule,
-.token.keyword,
-.token.important,
-.token.deleted {
-  color: #c678dd;
-}
-
-.token.regex,
-.token.statement {
-  color: #76d9e6;
-}
-
-.token.placeholder,
-.token.variable {
-  color: #fff;
-}
-
-.token.important,
-.token.statement,
-.token.bold {
-  font-weight: bold;
-}
-
-.token.operator,
-.token.punctuation {
-  color: #bebec5;
-}
-
-.token.entity {
-  cursor: help;
-}
-
-.token.italic {
-  font-style: italic;
-}
-
-code.language-markup {
-  color: #f9f9f9;
-}
-
-code.language-markup .token.tag,
-.token.tag {
-  color: #da5686;
-}
-
-code.language-markup .token.attr-name,
-.token.attr-name {
-  color: #98c379;
-}
-
-code.language-markup .token.attr-value,
-.token.attr-value {
-  color: #e6d06c;
-}
-
-code.language-markup .token.style,
-code.language-markup .token.script {
-  color: #76d9e6;
-}
-
-code.language-markup .token.script .token.keyword {
-  color: #76d9e6;
+.textar-min {
+  font-family: "textar-min";
 }

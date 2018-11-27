@@ -29,6 +29,22 @@
       "id": 6,
       "enable":true,
       "name": "Saitamaar"
+    },
+    {
+      "id": 7,
+      "enable":true,
+      "name": "RobotoJAA"
+    },
+    {
+      "id": 8,
+      "enable":true,
+      "name": "textar"
+    },
+    {
+      "id": 9,
+      "enable":true,
+      "name": "textar-min"
     }
   ]
+  
 }
