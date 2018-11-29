@@ -2,6 +2,10 @@ dist/
 !www/favicon.ico
 www/
 
+ios/
+android/
+electron/
+.gradle/
 *~
 *.sw[mnpcod]
 *.log
