@@ -1,4 +1,4 @@
-import { Component, Prop, State } from "@stencil/core";
+import { Component, Listen, Prop, State } from "@stencil/core";
 import { FontsProvider, Font } from "../../providers/fonts";
 import {
   getAA,
@@ -21,6 +21,14 @@ export class AppFont {
   @State() aa: string = "";
   @State() copied_css: boolean = false;
   @State() copied_html: boolean = false;
+
+  @Listen("paste")
+  handlePaste(ev) {
+    ev.preventDefault();
+    ev.stopPropagation();
+    const plaintext = ev.clipboardData.getData("text/plain");
+    this.aa = plaintext;
+  }
 
   async componentWillLoad() {
     this.aa = getAA();
@@ -94,8 +102,11 @@ export class AppFont {
 
       <ion-content padding>
         <div class="u-mtb4">
-          <div class="font-name u-mtb8">{this.font.name}</div>
-          <div class={`${this.font.name} aa`}>{this.aa}</div>
+          <div class="font-name u-mtb8">フォント名：{this.font.name}</div>
+          <div>下のAAは自由に変更できます</div>
+          <div contenteditable={true} class={`${this.font.name} aa aa-textarea`}>
+            {this.aa}
+          </div>
         </div>
         <div class="u-divider u-mt28" />
         <div class="html">

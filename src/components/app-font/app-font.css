@@ -1,6 +1,9 @@
+.aa-textarea {
+  display: inline-block;
+}
 code {
   font-weight: 400;
-  font-family: 'SFMono-Regular', 'Lucida Console', Monaco, monospace;
+  font-family: "SFMono-Regular", "Lucida Console", Monaco, monospace;
   font-size: 14px;
 }
 
@@ -55,7 +58,6 @@ pre[class*="language-"],
 }
 
 pre[class*="language-"] {
-
   border-radius: 4px;
   border: 1px solid #e1e1e8;
   overflow: auto;
@@ -71,7 +73,7 @@ pre[class*="language-"] code {
 
 :not(pre) > code[class*="language-"] {
   padding: 0.15em 0.2em 0.05em;
-  border-radius: .3em;
+  border-radius: 0.3em;
   border: 0.13em solid #7a6652;
   box-shadow: 1px 1px 0.3em -0.1em #000 inset;
 }
@@ -104,7 +106,7 @@ pre .line-highlight {
 }
 
 .token.namespace {
-  opacity: .7;
+  opacity: 0.7;
 }
 
 .token.prolog,
