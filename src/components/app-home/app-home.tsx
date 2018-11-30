@@ -27,7 +27,9 @@ export class AppHome {
     return [
       <ion-header>
         <ion-toolbar color="medium">
-          <ion-title>AAHub Fonts - アスキーアート表示対応フォント収集サイト</ion-title>
+          <ion-title>
+            AAHub Fonts - アスキーアート表示対応フォント収集サイト
+          </ion-title>
         </ion-toolbar>
       </ion-header>,
 
@@ -74,6 +76,18 @@ export class AppHome {
           <div class="description">
             AAHub Fontsではアスキーアート表示対フォントを収集しています。<br />
             実際のHTML、CSS設定も乗せていますのでご活用ください。<br />
+          </div>
+          <div class="description">
+            <a class="u-mlr8" href="https://aahub.org" target="_blank">
+              AAHub
+            </a>
+            <a
+              class="u-mlr8"
+              href="https://github.com/AAHub/fontbook"
+              target="_blank"
+            >
+              GitHub
+            </a>
           </div>
           <div class="credit u-fc-sub-black">
             Creaeted by AAHub Fonts 2018 .
