@@ -150,8 +150,8 @@ export class AppFont {
         </div>
         <div class="footer">
           <div class="description">
-            AAHub Fontsではアスキーアート表示対フォントを収集しています。<br />
-            実際のCSS設定も乗せていますのでご活用ください。<br />
+            AAHub Fontsではアスキーアート表示用フォントを紹介しています。<br />
+            HTML、CSS設定も紹介してるのでご活用ください。<br />
           </div>
           <div class="credit u-fc-sub-black">
             Creaeted by AAHub Fonts 2018 .
