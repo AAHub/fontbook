@@ -46,7 +46,7 @@ export const getCSS = (name: string = "") => {
   font-family: "${name}";
   white-space: pre;
   font-size: 16px;
-  line-height: 16px;
+  line-height: 18px;
 }`;
   return css;
 };
