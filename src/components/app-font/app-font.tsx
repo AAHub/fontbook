@@ -5,6 +5,7 @@ import {
   getCSS,
   getHTML,
   execCopy,
+  getBytes,
   setMetaTags
 } from "../../helpers/utils";
 import Prism from "prismjs";
@@ -104,8 +105,20 @@ export class AppFont {
         <div class="u-mtb4">
           <div class="font-name u-mtb8">フォント名：{this.font.name}</div>
           <div>下のAAは自由に変更できます</div>
-          <div contenteditable={true} class={`${this.font.name} aa aa-textarea`}>
+          <div
+            contenteditable={true}
+            class={`${this.font.name} aa aa-textarea`}
+          >
             {this.aa}
+          </div>
+        </div>
+        <div class="u-divider u-mt28" />
+        <div class="meta-wrapper">
+          <div class="meta-title">詳細情報</div>
+          <div class="fonts-wrapper">
+            <div class="size">ttf: {getBytes(this.font.size[0].size)}</div>
+            <div class="size">woff: {getBytes(this.font.size[1].size)}</div>
+            <div class="size">woff2: {getBytes(this.font.size[2].size)}</div>
           </div>
         </div>
         <div class="u-divider u-mt28" />

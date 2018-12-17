@@ -51,11 +51,20 @@ export const getCSS = (name: string = "") => {
   return css;
 };
 
+export const getBytes = (size: number = 0) => {
+  let s = size / 1024;
+  if (s < 1024) {
+    return Math.round(s * 10) / 10 + "KB";
+  }
+  return Math.round((s / 1024) * 10) / 10 + "MB";
+};
+
 export const setMetaTags = (title: string = "") => {
   if (title != "") {
     title = title + " | ";
   }
-  document.title = title + "AAHub Fonts - アスキーアート表示用Webフォントのカタログサイト";
+  document.title =
+    title + "AAHub Fonts - アスキーアート表示用Webフォントのカタログサイト";
 };
 
 export const getHTML = (name: string = "") => {

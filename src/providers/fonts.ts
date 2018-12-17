@@ -1,6 +1,7 @@
 export class Font {
   id: number;
   name: string;
+  size: any;
 
   constructor(fields: any) {
     for (const f in fields) {
