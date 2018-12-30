@@ -1,4 +1,5 @@
-export const BASE_URL = "https://fonts-aahub.netlify.com/";
+export const BASE_URL = "https://github.com/AAHub/fontbook/blob/master/src/";
+
 export const getAA = () => {
   const aa: string = `　　 　　　＿＿＿_
   　　　／　　 　 　＼
