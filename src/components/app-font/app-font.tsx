@@ -86,11 +86,6 @@ export class AppFont {
     const code: any = css[1];
     const escaped: any = css[2];
 
-    let html = this.genCode(this.html);
-    const hcl2: any = html[0];
-    const code2: any = html[1];
-    const escaped2: any = html[2];
-
     return [
       <ion-header>
         <ion-toolbar color="medium">
@@ -120,26 +115,6 @@ export class AppFont {
             <div class="size">woff: {getBytes(this.font.size[1].size)}</div>
             <div class="size">woff2: {getBytes(this.font.size[2].size)}</div>
           </div>
-        </div>
-        <div class="u-divider u-mt28" />
-        <div class="html">
-          <ion-button
-            fill="clear"
-            class="u-mt20 ev-copy-html"
-            size="small"
-            color="dark"
-            onClick={() => this.copyHTML()}
-          >
-            {this.copied_html ? "HTMLをコピーしました" : "HTMLをコピーする"}
-          </ion-button>
-          <highlight-code-line lines={hcl2.join()}>
-            <pre class="language-css">
-              <code
-                class="language-css"
-                innerHTML={escaped2 ? code2 : escape(code2)}
-              />
-            </pre>
-          </highlight-code-line>
         </div>
         <div class="u-divider u-mt28" />
         <div class="css">

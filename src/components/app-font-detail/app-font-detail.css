@@ -1,0 +1,18 @@
+.input-wrapper {
+  display: flex;
+  align-items: center;
+}
+.result-wrapper{
+    font-size: 24px;
+}
+.aa-textarea {
+  display: inline-block;
+}
+.meta-wrapper {
+  padding: 8px 12px 16px;
+}
+.meta-title {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 10px 0px;
+}

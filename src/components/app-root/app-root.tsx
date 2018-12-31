@@ -43,6 +43,7 @@ export class AppRoot {
         <ion-router useHash={false}>
           <ion-route url="/" component="app-home" />
           <ion-route url="/font/:id" component="app-font" />
+          <ion-route url="/font/:id/detail" component="app-font-detail" />
         </ion-router>
         <ion-nav swipeGesture={this.swipe} animated={false} />
       </ion-app>

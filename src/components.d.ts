@@ -13,6 +13,13 @@ import 'ionicons';
 
 export namespace Components {
 
+  interface AppFontDetail {
+    'id': string;
+  }
+  interface AppFontDetailAttributes extends StencilHTMLAttributes {
+    'id'?: string;
+  }
+
   interface AppFont {
     'id': string;
   }
@@ -36,6 +43,7 @@ export namespace Components {
 
 declare global {
   interface StencilElementInterfaces {
+    'AppFontDetail': Components.AppFontDetail;
     'AppFont': Components.AppFont;
     'AppHome': Components.AppHome;
     'AppRoot': Components.AppRoot;
@@ -43,12 +51,19 @@ declare global {
   }
 
   interface StencilIntrinsicElements {
+    'app-font-detail': Components.AppFontDetailAttributes;
     'app-font': Components.AppFontAttributes;
     'app-home': Components.AppHomeAttributes;
     'app-root': Components.AppRootAttributes;
     'highlight-code-line': Components.HighlightCodeLineAttributes;
   }
 
+
+  interface HTMLAppFontDetailElement extends Components.AppFontDetail, HTMLStencilElement {}
+  var HTMLAppFontDetailElement: {
+    prototype: HTMLAppFontDetailElement;
+    new (): HTMLAppFontDetailElement;
+  };
 
   interface HTMLAppFontElement extends Components.AppFont, HTMLStencilElement {}
   var HTMLAppFontElement: {
@@ -75,6 +90,7 @@ declare global {
   };
 
   interface HTMLElementTagNameMap {
+    'app-font-detail': HTMLAppFontDetailElement
     'app-font': HTMLAppFontElement
     'app-home': HTMLAppHomeElement
     'app-root': HTMLAppRootElement
@@ -82,6 +98,7 @@ declare global {
   }
 
   interface ElementTagNameMap {
+    'app-font-detail': HTMLAppFontDetailElement;
     'app-font': HTMLAppFontElement;
     'app-home': HTMLAppHomeElement;
     'app-root': HTMLAppRootElement;

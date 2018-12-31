@@ -1,4 +1,6 @@
-export const BASE_URL = "https://github.com/AAHub/fontbook/blob/master/src/";
+// export const BASE_URL = "https://github.com/AAHub/fontbook/blob/master/src/";
+export const BASE_URL = "https://<フォントのパス>";
+import { SAITAMAAR_MAP } from "./saitamaar_map";
 
 export const getAA = () => {
   const aa: string = `　　 　　　＿＿＿_
@@ -37,9 +39,9 @@ export const execCopy = text => {
 export const getCSS = (name: string = "") => {
   const css: string = `@font-face {
   font-family: "${name}";
-  src: url("${BASE_URL}assets/fonts/${name}/${name}.woff2") format("woff2"),
-    url("${BASE_URL}assets/fonts/${name}/${name}.woff") format("woff"),
-    url("${BASE_URL}assets/fonts/${name}/${name}.ttf") format("ttf");
+  src: url("${BASE_URL}/${name}.woff2") format("woff2"),
+    url("${BASE_URL}/${name}.woff") format("woff"),
+    url("${BASE_URL}/${name}.ttf") format("ttf");
   font-display: swap;
 }
 
@@ -111,4 +113,33 @@ export const platformIs = (platform: string = "") => {
     }
   }
   return false;
+};
+
+export const getCharCodeAt = (str: string = "") => {
+  return str.charCodeAt(0);
+};
+
+export const fromCharCodeAt = (code: number = 0) => {
+  return String.fromCharCode(code);
+};
+
+export const getKmeansResult = (code: number = 0) => {
+  const map = SAITAMAAR_MAP[code];
+  if (map) {
+    return map;
+  } else {
+    return 0;
+  }
+};
+
+export const getLikeChar = (code: number = 0) => {
+  let result = [];
+  for (const key of Object.keys(SAITAMAAR_MAP)) {
+    if (SAITAMAAR_MAP[key] == code) {
+      const keyCode = Number(key);
+      const str = String.fromCharCode(keyCode);
+      result.push(str);
+    }
+  }
+  return result;
 };
