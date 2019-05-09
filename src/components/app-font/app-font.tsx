@@ -6,6 +6,7 @@ import {
   getHTML,
   execCopy,
   getBytes,
+  getFontPath,
   setMetaTags
 } from "../../helpers/utils";
 import Prism from "prismjs";
@@ -136,10 +137,31 @@ export class AppFont {
             </pre>
           </highlight-code-line>
         </div>
+        <div class="u-divider u-mt28" />
+        <div class="download">
+          <div class="meta-title">フォントをダウンロード</div>
+          <div class="font">
+            <a href={getFontPath(this.font.name, "ttf")} target="_blank">
+              ttfをダウンロード
+            </a>
+          </div>
+          <div class="font">
+            <a href={getFontPath(this.font.name, "woff")} target="_blank">
+              woffをダウンロード
+            </a>
+          </div>
+          <div class="font">
+            <a href={getFontPath(this.font.name, "woff2")} target="_blank">
+              woff2をダウンロード
+            </a>
+          </div>
+        </div>
         <div class="footer">
           <div class="description">
-            AAHub Fontsではアスキーアート表示用フォントを紹介しています。<br />
-            HTML、CSS設定も紹介してるのでご活用ください。<br />
+            AAHub Fontsではアスキーアート表示用フォントを紹介しています。
+            <br />
+            HTML、CSS設定も紹介してるのでご活用ください。
+            <br />
           </div>
           <div class="credit u-fc-sub-black">
             Creaeted by AAHub Fonts 2018 .

@@ -1,5 +1,6 @@
 // export const BASE_URL = "https://github.com/AAHub/fontbook/blob/master/src/";
 export const BASE_URL = "https://<フォントのパス>";
+export const DOWNLOAD_URL = "https://fonts.aahub.org";
 import { SAITAMAAR_MAP } from "./saitamaar_map";
 
 export const getAA = () => {
@@ -34,6 +35,10 @@ export const execCopy = text => {
   document.getSelection().selectAllChildren(temp);
   document.execCommand("copy");
   document.body.removeChild(temp);
+};
+
+export const getFontPath = (name: string = "", ext: string = "") => {
+  return `${DOWNLOAD_URL}/assets/fonts/${name}/${name}.${ext}`;
 };
 
 export const getCSS = (name: string = "") => {
