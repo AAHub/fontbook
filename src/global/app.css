@@ -879,3 +879,31 @@
 .ume-pgc4 {
   font-family: "ume-pgc4";
 }
+
+/*
+  monaya
+*/
+@font-face {
+  font-family: "monaya";
+  src: url("/assets/fonts/monaya/monaya.woff2") format("woff2"),
+    url("/assets/fonts/monaya/monaya.woff") format("woff"),
+    url("/assets/fonts/monaya/monaya.ttf") format("ttf");
+  font-display: swap;
+}
+.monaya {
+  font-family: "monaya";
+}
+
+/*
+  giko2
+*/
+@font-face {
+  font-family: "giko2";
+  src: url("/assets/fonts/giko2/giko2.woff2") format("woff2"),
+    url("/assets/fonts/giko2/giko2.woff") format("woff"),
+    url("/assets/fonts/giko2/giko2.ttf") format("ttf");
+  font-display: swap;
+}
+.giko2 {
+  font-family: "giko2";
+}
