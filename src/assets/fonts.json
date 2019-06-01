@@ -89,6 +89,26 @@
         {"type": "woff", "size":2015704},
         {"type": "woff2", "size":1366964}
       ]
+    },
+    {
+      "id": 11,
+      "enable":true,
+      "name": "monaya",
+      "size": [
+        {"type": "ttf", "size":1985408},
+        {"type": "woff", "size":1297360},
+        {"type": "woff2", "size":1039404}
+      ]
+    },
+    {
+      "id": 12,
+      "enable":true,
+      "name": "giko2",
+      "size": [
+        {"type": "ttf", "size":1850844},
+        {"type": "woff", "size":536104},
+        {"type": "woff2", "size":360464}
+      ]
     }
   ]
   
