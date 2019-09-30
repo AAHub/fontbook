@@ -78,10 +78,18 @@ export class AppFontDetail {
             })()}
           </div>
         </div>
+        <ins
+          class="adsbygoogle"
+          data-ad-client="ca-pub-7714239321627994"
+          data-ad-slot="9463296010"
+        />
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
         <div class="footer">
           <div class="description">
-            AAHub Fontsではアスキーアート表示用フォントを紹介しています。<br />
-            HTML、CSS設定も紹介してるのでご活用ください。<br />
+            AAHub Fontsではアスキーアート表示用フォントを紹介しています。
+            <br />
+            HTML、CSS設定も紹介してるのでご活用ください。
+            <br />
           </div>
           <div class="credit u-fc-sub-black">
             Creaeted by AAHub Fonts 2018 .

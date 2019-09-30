@@ -907,3 +907,8 @@
 .giko2 {
   font-family: "giko2";
 }
+.adsbygoogle {
+  display: inline-block;
+  width: 320px;
+  height: 100px;
+}
