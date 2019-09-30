@@ -15,7 +15,7 @@ function range(start: number, end: number) {
   tag: "highlight-code-line"
 })
 export class CustomClock implements ComponentInterface {
-  @Element() el!: HTMLStencilElement;
+  @Element() el!: any;
   @Prop() lines?: string;
 
   componentDidLoad() {
