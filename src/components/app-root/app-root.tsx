@@ -1,4 +1,4 @@
-import { Component, State, Prop, Listen } from "@stencil/core";
+import { Component, State, h, Prop, Listen } from "@stencil/core";
 import { platformIs } from "../../helpers/utils";
 
 @Component({

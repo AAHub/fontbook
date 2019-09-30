@@ -1,4 +1,4 @@
-import { Component, Listen, Prop, State } from "@stencil/core";
+import { Component, Listen, h, Prop, State } from "@stencil/core";
 import { FontsProvider, Font } from "../../providers/fonts";
 import {
   getAA,
@@ -97,7 +97,7 @@ export class AppFont {
         </ion-toolbar>
       </ion-header>,
 
-      <ion-content padding>
+      <ion-content class="ion-padding">
         <div class="u-mtb4">
           <div class="font-name u-mtb8">フォント名：{this.font.name}</div>
           <div>下のAAは自由に変更できます</div>

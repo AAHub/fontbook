@@ -1,4 +1,4 @@
-import { Component, Prop, State } from "@stencil/core";
+import { Component, Prop, h, State } from "@stencil/core";
 import { FontsProvider, Font } from "../../providers/fonts";
 import {
   setMetaTags,
@@ -49,7 +49,7 @@ export class AppFontDetail {
         </ion-toolbar>
       </ion-header>,
 
-      <ion-content padding>
+      <ion-content class="ion-padding">
         <h1>類似フォント検索(仮)</h1>
         <div class="u-mtb4">
           <div class="font-name u-mtb8">フォント名：{this.font.name}</div>

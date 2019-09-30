@@ -1,4 +1,4 @@
-import { Component, Element, State } from "@stencil/core";
+import { Component, Element, h, State } from "@stencil/core";
 import { FontsProvider, Font } from "../../providers/fonts";
 import { getAA, setMetaTags } from "../../helpers/utils";
 
@@ -33,7 +33,7 @@ export class AppHome {
         </ion-toolbar>
       </ion-header>,
 
-      <ion-content padding>
+      <ion-content class="ion-padding">
         <div class="title u-mlr8">
           全部で <span class="font-length">{this.fontsMetaData.length}</span>{" "}
           個のfont-familyを収録.

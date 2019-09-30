@@ -5,70 +5,36 @@
  */
 
 
-import '@stencil/core';
-
-import '@ionic/core';
-import 'ionicons';
+import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 
 
 export namespace Components {
-
-  interface AppFontDetail {
-    'id': string;
-  }
-  interface AppFontDetailAttributes extends StencilHTMLAttributes {
-    'id'?: string;
-  }
-
   interface AppFont {
     'id': string;
   }
-  interface AppFontAttributes extends StencilHTMLAttributes {
-    'id'?: string;
+  interface AppFontDetail {
+    'id': string;
   }
-
   interface AppHome {}
-  interface AppHomeAttributes extends StencilHTMLAttributes {}
-
   interface AppRoot {}
-  interface AppRootAttributes extends StencilHTMLAttributes {}
-
   interface HighlightCodeLine {
-    'lines'?: string;
-  }
-  interface HighlightCodeLineAttributes extends StencilHTMLAttributes {
     'lines'?: string;
   }
 }
 
 declare global {
-  interface StencilElementInterfaces {
-    'AppFontDetail': Components.AppFontDetail;
-    'AppFont': Components.AppFont;
-    'AppHome': Components.AppHome;
-    'AppRoot': Components.AppRoot;
-    'HighlightCodeLine': Components.HighlightCodeLine;
-  }
 
-  interface StencilIntrinsicElements {
-    'app-font-detail': Components.AppFontDetailAttributes;
-    'app-font': Components.AppFontAttributes;
-    'app-home': Components.AppHomeAttributes;
-    'app-root': Components.AppRootAttributes;
-    'highlight-code-line': Components.HighlightCodeLineAttributes;
-  }
-
-
-  interface HTMLAppFontDetailElement extends Components.AppFontDetail, HTMLStencilElement {}
-  var HTMLAppFontDetailElement: {
-    prototype: HTMLAppFontDetailElement;
-    new (): HTMLAppFontDetailElement;
-  };
 
   interface HTMLAppFontElement extends Components.AppFont, HTMLStencilElement {}
   var HTMLAppFontElement: {
     prototype: HTMLAppFontElement;
     new (): HTMLAppFontElement;
+  };
+
+  interface HTMLAppFontDetailElement extends Components.AppFontDetail, HTMLStencilElement {}
+  var HTMLAppFontDetailElement: {
+    prototype: HTMLAppFontDetailElement;
+    new (): HTMLAppFontDetailElement;
   };
 
   interface HTMLAppHomeElement extends Components.AppHome, HTMLStencilElement {}
@@ -88,30 +54,50 @@ declare global {
     prototype: HTMLHighlightCodeLineElement;
     new (): HTMLHighlightCodeLineElement;
   };
-
   interface HTMLElementTagNameMap {
-    'app-font-detail': HTMLAppFontDetailElement
-    'app-font': HTMLAppFontElement
-    'app-home': HTMLAppHomeElement
-    'app-root': HTMLAppRootElement
-    'highlight-code-line': HTMLHighlightCodeLineElement
-  }
-
-  interface ElementTagNameMap {
-    'app-font-detail': HTMLAppFontDetailElement;
     'app-font': HTMLAppFontElement;
+    'app-font-detail': HTMLAppFontDetailElement;
     'app-home': HTMLAppHomeElement;
     'app-root': HTMLAppRootElement;
     'highlight-code-line': HTMLHighlightCodeLineElement;
   }
+}
+
+declare namespace LocalJSX {
+  interface AppFont {
+    'id'?: string;
+  }
+  interface AppFontDetail {
+    'id'?: string;
+  }
+  interface AppHome {}
+  interface AppRoot {}
+  interface HighlightCodeLine {
+    'lines'?: string;
+  }
+
+  interface IntrinsicElements {
+    'app-font': AppFont;
+    'app-font-detail': AppFontDetail;
+    'app-home': AppHome;
+    'app-root': AppRoot;
+    'highlight-code-line': HighlightCodeLine;
+  }
+}
+
+export { LocalJSX as JSX };
 
 
+declare module "@stencil/core" {
   export namespace JSX {
-    export interface Element {}
-    export interface IntrinsicElements extends StencilIntrinsicElements {
-      [tagName: string]: any;
+    interface IntrinsicElements {
+      'app-font': LocalJSX.AppFont & JSXBase.HTMLAttributes<HTMLAppFontElement>;
+      'app-font-detail': LocalJSX.AppFontDetail & JSXBase.HTMLAttributes<HTMLAppFontDetailElement>;
+      'app-home': LocalJSX.AppHome & JSXBase.HTMLAttributes<HTMLAppHomeElement>;
+      'app-root': LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
+      'highlight-code-line': LocalJSX.HighlightCodeLine & JSXBase.HTMLAttributes<HTMLHighlightCodeLineElement>;
     }
   }
-  export interface HTMLAttributes extends StencilHTMLAttributes {}
-
 }
+
+
