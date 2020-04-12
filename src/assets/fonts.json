@@ -2,114 +2,118 @@
   "fonts": [
     {
       "id": 1,
-      "enable":true,
+      "enable": true,
       "name": "aahub",
       "size": [
-        {"type": "ttf", "size":2697460},
-        {"type": "woff", "size":1719948},
-        {"type": "woff2", "size":1365616}
+        { "type": "ttf", "size": 2697460 },
+        { "type": "woff", "size": 1719948 },
+        { "type": "woff2", "size": 1365616 }
       ]
     },
     {
       "id": 2,
-      "enable":true,
+      "enable": true,
       "name": "aahub_light",
       "size": [
-        {"type": "ttf", "size":97188},
-        {"type": "woff", "size":59308},
-        {"type": "woff2", "size":44960}
+        { "type": "ttf", "size": 97188 },
+        { "type": "woff", "size": 59308 },
+        { "type": "woff2", "size": 44960 }
       ]
     },
     {
       "id": 3,
-      "enable":false,
-      "name": "ipagp"
+      "enable": true,
+      "name": "ipamona",
+      "size": [
+        { "type": "ttf", "size": 6235712 },
+        { "type": "woff", "size": 4270656 },
+        { "type": "woff2", "size": 3120132 }
+      ]
     },
     {
       "id": 4,
-      "enable":false,
+      "enable": false,
       "name": "mona"
     },
     {
       "id": 5,
-      "enable":true,
+      "enable": true,
       "name": "monapo",
       "size": [
-        {"type": "ttf", "size":2697456},
-        {"type": "woff", "size":1719944},
-        {"type": "woff2", "size":1365664}
+        { "type": "ttf", "size": 2697456 },
+        { "type": "woff", "size": 1719944 },
+        { "type": "woff2", "size": 1365664 }
       ]
     },
     {
       "id": 6,
-      "enable":true,
+      "enable": true,
       "name": "Saitamaar",
       "size": [
-        {"type": "ttf", "size":2697456},
-        {"type": "woff", "size":605124},
-        {"type": "woff2", "size":407684}
+        { "type": "ttf", "size": 2697456 },
+        { "type": "woff", "size": 605124 },
+        { "type": "woff2", "size": 407684 }
       ]
     },
     {
       "id": 7,
-      "enable":true,
+      "enable": true,
       "name": "RobotoJAA",
       "size": [
-        {"type": "ttf", "size":4855524},
-        {"type": "woff", "size":2987868},
-        {"type": "woff2", "size":407684}
+        { "type": "ttf", "size": 4855524 },
+        { "type": "woff", "size": 2987868 },
+        { "type": "woff2", "size": 407684 }
       ]
     },
     {
       "id": 8,
-      "enable":true,
+      "enable": true,
       "name": "textar",
       "size": [
-        {"type": "ttf", "size":3296924},
-        {"type": "woff", "size":2139276},
-        {"type": "woff2", "size":1691496}
+        { "type": "ttf", "size": 3296924 },
+        { "type": "woff", "size": 2139276 },
+        { "type": "woff2", "size": 1691496 }
       ]
     },
     {
       "id": 9,
-      "enable":true,
+      "enable": true,
       "name": "textar-min",
       "size": [
-        {"type": "ttf", "size":1756100},
-        {"type": "woff", "size":950396},
-        {"type": "woff2", "size":776928}
+        { "type": "ttf", "size": 1756100 },
+        { "type": "woff", "size": 950396 },
+        { "type": "woff2", "size": 776928 }
       ]
     },
     {
       "id": 10,
-      "enable":true,
+      "enable": true,
       "name": "ume-pgc4",
       "size": [
-        {"type": "ttf", "size":4208848},
-        {"type": "woff", "size":2015704},
-        {"type": "woff2", "size":1366964}
+        { "type": "ttf", "size": 4208848 },
+        { "type": "woff", "size": 2015704 },
+        { "type": "woff2", "size": 1366964 }
       ]
     },
     {
       "id": 11,
-      "enable":true,
+      "enable": true,
       "name": "monaya",
       "size": [
-        {"type": "ttf", "size":1985408},
-        {"type": "woff", "size":1297360},
-        {"type": "woff2", "size":1039404}
+        { "type": "ttf", "size": 1985408 },
+        { "type": "woff", "size": 1297360 },
+        { "type": "woff2", "size": 1039404 }
       ]
     },
     {
       "id": 12,
-      "enable":true,
+      "enable": true,
       "name": "giko2",
       "size": [
-        {"type": "ttf", "size":1850844},
-        {"type": "woff", "size":536104},
-        {"type": "woff2", "size":360464}
+        { "type": "ttf", "size": 1850844 },
+        { "type": "woff", "size": 536104 },
+        { "type": "woff2", "size": 360464 }
       ]
     }
   ]
-  
 }
