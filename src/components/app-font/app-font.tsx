@@ -7,13 +7,13 @@ import {
   execCopy,
   getBytes,
   getFontPath,
-  setMetaTags
+  setMetaTags,
 } from "../../helpers/utils";
 import Prism from "prismjs";
 
 @Component({
   tag: "app-font",
-  styleUrl: "app-font.css"
+  styleUrl: "app-font.css",
 })
 export class AppFont {
   @Prop() id: string;
@@ -56,7 +56,7 @@ export class AppFont {
   }
 
   highlight(code: string, lang?: string) {
-    return Prism.highlight(code, Prism.languages[lang]);
+    return Prism.highlight(code, Prism.languages[lang], "js");
   }
 
   genCode(src: string) {
@@ -167,7 +167,7 @@ export class AppFont {
             Creaeted by AAHub Fonts 2018 .
           </div>
         </div>
-      </ion-content>
+      </ion-content>,
     ];
   }
 }
