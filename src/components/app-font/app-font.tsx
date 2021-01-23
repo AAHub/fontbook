@@ -41,7 +41,7 @@ export class AppFont {
     setMetaTags(this.font.name);
   }
 
-  componentDidUnload() {
+  disconnectedCallback() {
     setMetaTags();
   }
 

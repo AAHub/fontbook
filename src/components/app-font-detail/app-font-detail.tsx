@@ -4,12 +4,12 @@ import {
   setMetaTags,
   getCharCodeAt,
   getKmeansResult,
-  getLikeChar
+  getLikeChar,
 } from "../../helpers/utils";
 
 @Component({
   tag: "app-font-detail",
-  styleUrl: "app-font-detail.css"
+  styleUrl: "app-font-detail.css",
 })
 export class AppFontDetail {
   @Prop() id: string;
@@ -23,7 +23,7 @@ export class AppFontDetail {
     setMetaTags(this.font.name + "類似文字検索");
   }
 
-  componentDidUnload() {
+  disconnectedCallback() {
     setMetaTags();
   }
 
@@ -58,7 +58,7 @@ export class AppFontDetail {
               id="aa-textarea"
               class="input-aa"
               placeholder="調べたい文字を入力"
-              onInput={e => this.textInput(e)}
+              onInput={(e) => this.textInput(e)}
             />
             <ion-button color="dark" size="small" onClick={() => this.result()}>
               検索
@@ -95,7 +95,7 @@ export class AppFontDetail {
             Creaeted by AAHub Fonts 2018 .
           </div>
         </div>
-      </ion-content>
+      </ion-content>,
     ];
   }
 }

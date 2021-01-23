@@ -21,6 +21,16 @@
       ]
     },
     {
+      "id": 13,
+      "enable": true,
+      "name": "aahub_light4",
+      "size": [
+        { "type": "ttf", "size": 322572 },
+        { "type": "woff", "size": 218088 },
+        { "type": "woff2", "size": 172104 }
+      ]
+    },
+    {
       "id": 3,
       "enable": true,
       "name": "ipamona",
@@ -53,6 +63,16 @@
         { "type": "ttf", "size": 2697456 },
         { "type": "woff", "size": 605124 },
         { "type": "woff2", "size": 407684 }
+      ]
+    },
+    {
+      "id": 14,
+      "enable": true,
+      "name": "saitamaar_light",
+      "size": [
+        { "type": "ttf", "size": 306176 },
+        { "type": "woff", "size": 95584 },
+        { "type": "woff2", "size": 74832 }
       ]
     },
     {

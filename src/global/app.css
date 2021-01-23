@@ -755,6 +755,20 @@
 }
 
 /*
+  aahub_light4
+*/
+@font-face {
+  font-family: "aahub_light4";
+  src: url("/assets/fonts/aahub_light4/aahub_light4.woff2") format("woff2"),
+    url("/assets/fonts/aahub_light4/aahub_light4.woff") format("woff"),
+    url("/assets/fonts/aahub_light4/aahub_light4.ttf") format("ttf");
+  font-display: swap;
+}
+.aahub_light4 {
+  font-family: "aahub_light4";
+}
+
+/*
   aahub
 */
 @font-face {
@@ -822,6 +836,21 @@
 }
 .Saitamaar {
   font-family: "Saitamaar";
+}
+
+/*
+  saitamaar_light
+*/
+@font-face {
+  font-family: "saitamaar_light";
+  src: url("/assets/fonts/saitamaar_light/saitamaar_light.woff2")
+      format("woff2"),
+    url("/assets/fonts/saitamaar_light/saitamaar_light.woff") format("woff"),
+    url("/assets/fonts/saitamaar_light/saitamaar_light.ttf") format("ttf");
+  font-display: swap;
+}
+.saitamaar_light {
+  font-family: "saitamaar_light";
 }
 
 /*
