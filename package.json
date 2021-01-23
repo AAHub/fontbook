@@ -21,6 +21,6 @@
     "prismjs": "^1.15.0"
   },
   "devDependencies": {
-    "workbox-build": "3.4.1"
+    "workbox-build": "^4.3.1"
   }
 }
