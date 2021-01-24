@@ -207,3 +207,8 @@ code.language-markup .token.script {
 code.language-markup .token.script .token.keyword {
   color: #76d9e6;
 }
+
+.unicode-aa {
+  font-size: 12px !important;
+  line-height: 12px !important;
+}

@@ -941,3 +941,17 @@
   width: 320px;
   height: 100px;
 }
+
+/*
+  ipamona
+*/
+@font-face {
+  font-family: "ipamona";
+  src: url("/assets/fonts/ipamona/ipamona.woff2") format("woff2"),
+    url("/assets/fonts/ipamona/ipamona.woff") format("woff"),
+    url("/assets/fonts/ipamona/ipamona.ttf") format("ttf");
+  font-display: swap;
+}
+.ipamona {
+  font-family: "ipamona";
+}

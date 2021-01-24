@@ -8,6 +8,7 @@ import {
   getBytes,
   getFontPath,
   setMetaTags,
+  getUnicodeAA,
 } from "../../helpers/utils";
 import Prism from "prismjs";
 
@@ -21,6 +22,7 @@ export class AppFont {
   @State() css: string = "";
   @State() html: string = "";
   @State() aa: string = "";
+  @State() unicodeAA: string = "";
   @State() copied_css: boolean = false;
   @State() copied_html: boolean = false;
 
@@ -34,6 +36,7 @@ export class AppFont {
 
   async componentWillLoad() {
     this.aa = getAA();
+    this.unicodeAA = getUnicodeAA();
     const id = Number(this.id);
     this.font = await FontsProvider.getFontsDataById(id);
     this.css = getCSS(this.font.name);
@@ -154,6 +157,16 @@ export class AppFont {
             <a href={getFontPath(this.font.name, "woff2")} target="_blank">
               woff2をダウンロード
             </a>
+          </div>
+        </div>
+        <div class="u-divider u-mt28" />
+        <div class="u-mb4 u-mt28">
+          <div>Unicode:</div>
+          <div
+            contenteditable={true}
+            class={`${this.font.name} unicode-aa aa aa-textarea`}
+          >
+            {this.unicodeAA}
           </div>
         </div>
         <div class="footer">
