@@ -140,25 +140,21 @@ export class AppFont {
             </pre>
           </highlight-code-line>
         </div>
-        <div class="u-divider u-mt28" />
-        <div class="download">
-          <div class="meta-title">フォントをダウンロード</div>
-          <div class="font">
-            <a href={getFontPath(this.font.name, "ttf")} target="_blank">
-              ttfをダウンロード
-            </a>
-          </div>
-          <div class="font">
-            <a href={getFontPath(this.font.name, "woff")} target="_blank">
-              woffをダウンロード
-            </a>
-          </div>
-          <div class="font">
-            <a href={getFontPath(this.font.name, "woff2")} target="_blank">
-              woff2をダウンロード
-            </a>
-          </div>
-        </div>
+        {(() => {
+          if (this.font.download_url) {
+            return [
+              <div class="u-divider u-mt28" />,
+              <div class="download">
+                <div class="meta-title">フォントをダウンロード</div>
+                <div class="font">
+                  <a href={this.font.download_url} target="_blank">
+                    ダウンロード
+                  </a>
+                </div>
+              </div>,
+            ];
+          }
+        })()}
         <div class="u-divider u-mt28" />
         <div class="u-mb4 u-mt28">
           <div>Unicode:</div>

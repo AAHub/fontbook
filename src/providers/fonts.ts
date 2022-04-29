@@ -2,6 +2,7 @@ export class Font {
   id: number;
   name: string;
   size: any;
+  download_url: string;
 
   constructor(fields: any) {
     for (const f in fields) {
@@ -25,8 +26,8 @@ export class FontsController {
       const rsp = await fetch("/assets/fonts.json");
       const info = await rsp.json();
       this.fontsMetaData = info.fonts
-        .map(font => new Font(font))
-        .filter(font => {
+        .map((font) => new Font(font))
+        .filter((font) => {
           return font.enable == true;
         });
       return this.fontsMetaData;
@@ -39,9 +40,11 @@ export class FontsController {
       return null;
     }
     const fontsMetaData = await this.fetchFontsData();
-    const fonts = fontsMetaData.map(font => new Font(font)).filter(font => {
-      return font.id == id;
-    });
+    const fonts = fontsMetaData
+      .map((font) => new Font(font))
+      .filter((font) => {
+        return font.id == id;
+      });
     return fonts[0];
   }
 }

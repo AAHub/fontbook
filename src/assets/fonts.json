@@ -4,6 +4,7 @@
       "id": 1,
       "enable": true,
       "name": "aahub",
+      "download_url": "./assets/fonts/aahub/aahub.zip",
       "size": [
         { "type": "ttf", "size": 2697460 },
         { "type": "woff", "size": 1719948 },
@@ -14,6 +15,7 @@
       "id": 2,
       "enable": true,
       "name": "aahub_light",
+      "download_url": "./assets/fonts/aahub_light/aahub_light.zip",
       "size": [
         { "type": "ttf", "size": 97188 },
         { "type": "woff", "size": 59308 },
@@ -24,6 +26,7 @@
       "id": 13,
       "enable": true,
       "name": "aahub_light4",
+      "download_url": "./assets/fonts/aahub_light4/aahub_light4.zip",
       "size": [
         { "type": "ttf", "size": 322572 },
         { "type": "woff", "size": 218088 },
@@ -49,6 +52,7 @@
       "id": 5,
       "enable": true,
       "name": "monapo",
+      "download_url": "./assets/fonts/monapo/monapo.zip",
       "size": [
         { "type": "ttf", "size": 2697456 },
         { "type": "woff", "size": 1719944 },
@@ -59,6 +63,7 @@
       "id": 6,
       "enable": true,
       "name": "Saitamaar",
+      "download_url": "./assets/fonts/Saitamaar/Saitamaar.zip",
       "size": [
         { "type": "ttf", "size": 2697456 },
         { "type": "woff", "size": 605124 },
@@ -69,6 +74,7 @@
       "id": 14,
       "enable": true,
       "name": "saitamaar_light",
+      "download_url": "./assets/fonts/saitamaar_light/saitamaar_light.zip",
       "size": [
         { "type": "ttf", "size": 306176 },
         { "type": "woff", "size": 95584 },
@@ -79,6 +85,7 @@
       "id": 7,
       "enable": true,
       "name": "RobotoJAA",
+      "download_url": "./assets/fonts/RobotoJAA/RobotoJAA.zip",
       "size": [
         { "type": "ttf", "size": 4855524 },
         { "type": "woff", "size": 2987868 },
@@ -119,6 +126,7 @@
       "id": 11,
       "enable": true,
       "name": "monaya",
+      "download_url": "https://code.google.com/archive/p/tuboroidkai/downloads",
       "size": [
         { "type": "ttf", "size": 1985408 },
         { "type": "woff", "size": 1297360 },
