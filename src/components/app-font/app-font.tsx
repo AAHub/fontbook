@@ -6,7 +6,6 @@ import {
   getHTML,
   execCopy,
   getBytes,
-  getFontPath,
   setMetaTags,
   getUnicodeAA,
 } from "../../helpers/utils";
