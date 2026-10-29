@@ -38,7 +38,10 @@ export class AppFont {
     this.unicodeAA = getUnicodeAA();
     const id = Number(this.id);
     this.font = await FontsProvider.getFontsDataById(id);
-    this.css = getCSS(this.font.name);
+    this.css = getCSS(
+      this.font.name,
+      this.font.size?.map((s) => s.type)
+    );
     this.html = getHTML(this.font.name);
     setMetaTags(this.font.name);
   }
@@ -114,10 +117,15 @@ export class AppFont {
         <div class="meta-wrapper">
           <div class="meta-title">詳細情報</div>
           <div class="fonts-wrapper">
-            <div class="size">ttf: {getBytes(this.font.size[0].size)}</div>
-            <div class="size">woff: {getBytes(this.font.size[1].size)}</div>
-            <div class="size">woff2: {getBytes(this.font.size[2].size)}</div>
+            {(this.font.size || []).map((s) => (
+              <div class="size">
+                {s.type}: {getBytes(s.size)}
+              </div>
+            ))}
           </div>
+          {this.font.author ? (
+            <div class="size">作者: {this.font.author}</div>
+          ) : null}
         </div>
         <div class="u-divider u-mt28" />
         <div class="css">
@@ -140,6 +148,19 @@ export class AppFont {
           </highlight-code-line>
         </div>
         {(() => {
+          if (this.font.site_url) {
+            return [
+              <div class="u-divider u-mt28" />,
+              <div class="download">
+                <div class="meta-title">配布ページ</div>
+                <div class="font">
+                  <a href={this.font.site_url} target="_blank" rel="noopener">
+                    {this.font.site_name || "配布ページ"}で見る
+                  </a>
+                </div>
+              </div>,
+            ];
+          }
           if (this.font.download_url) {
             return [
               <div class="u-divider u-mt28" />,
