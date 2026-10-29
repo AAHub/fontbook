@@ -955,3 +955,29 @@
 .ipamona {
   font-family: "ipamona";
 }
+
+/*
+  AA-PGothic (配布元 Codeberg Pages から直接読み込み。ファイルは同梱しない)
+*/
+@font-face {
+  font-family: "AA-PGothic-16px";
+  src: url("https://foxkehfan2328.codeberg.page/AA_PGothic/AA-PGothic-16px.woff2")
+    format("woff2");
+  font-display: swap;
+}
+.AA-PGothic-16px {
+  font-family: "AA-PGothic-16px";
+}
+@font-face {
+  font-family: "AA-PGothic-12px";
+  src: url("https://foxkehfan2328.codeberg.page/AA_PGothic/AA-PGothic-12px.woff2")
+    format("woff2");
+  font-display: swap;
+}
+.AA-PGothic-12px {
+  font-family: "AA-PGothic-12px";
+}
+.AA-PGothic-12px.aa {
+  font-size: 12px;
+  line-height: 14px;
+}

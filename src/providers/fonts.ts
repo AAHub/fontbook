@@ -3,6 +3,10 @@ export class Font {
   name: string;
   size: any;
   download_url: string;
+  // 配布元へのリンクのみで紹介するフォント (ファイルは同梱しない)
+  site_url?: string;
+  site_name?: string;
+  author?: string;
 
   constructor(fields: any) {
     for (const f in fields) {

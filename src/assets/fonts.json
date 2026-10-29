@@ -142,6 +142,32 @@
         { "type": "woff", "size": 536104 },
         { "type": "woff2", "size": 360464 }
       ]
+    },
+    {
+      "id": 15,
+      "enable": true,
+      "name": "AA-PGothic-16px",
+      "author": "ぜりーさん",
+      "site_name": "Codeberg",
+      "site_url": "https://codeberg.org/foxkehfan2328/AA_PGothic",
+      "size": [
+        { "type": "ttf", "size": 4260224 },
+        { "type": "otf", "size": 3028260 },
+        { "type": "woff2", "size": 314144 }
+      ]
+    },
+    {
+      "id": 16,
+      "enable": true,
+      "name": "AA-PGothic-12px",
+      "author": "ぜりーさん",
+      "site_name": "Codeberg",
+      "site_url": "https://codeberg.org/foxkehfan2328/AA_PGothic",
+      "size": [
+        { "type": "ttf", "size": 3144836 },
+        { "type": "otf", "size": 1951436 },
+        { "type": "woff2", "size": 255588 }
+      ]
     }
   ]
 }

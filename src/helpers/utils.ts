@@ -66,12 +66,17 @@ export const getFontPath = (name: string = "", ext: string = "") => {
   return `${DOWNLOAD_URL}/assets/fonts/${name}/${name}.${ext}`;
 };
 
-export const getCSS = (name: string = "") => {
+export const getCSS = (
+  name: string = "",
+  types: string[] = ["woff2", "woff", "ttf"]
+) => {
+  const src = ["woff2", "woff", "ttf"]
+    .filter((ext) => types.includes(ext))
+    .map((ext) => `url("${BASE_URL}/${name}.${ext}") format("${ext}")`)
+    .join(",\n    ");
   const css: string = `@font-face {
   font-family: "${name}";
-  src: url("${BASE_URL}/${name}.woff2") format("woff2"),
-    url("${BASE_URL}/${name}.woff") format("woff"),
-    url("${BASE_URL}/${name}.ttf") format("ttf");
+  src: ${src};
   font-display: swap;
 }
 
