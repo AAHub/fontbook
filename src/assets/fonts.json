@@ -168,6 +168,34 @@
         { "type": "otf", "size": 1951436 },
         { "type": "woff2", "size": 255588 }
       ]
+    },
+    {
+      "id": 17,
+      "enable": true,
+      "name": "Saitamaar-Shin",
+      "author": "ぜりーさん",
+      "site_name": "Codeberg",
+      "site_url": "https://codeberg.org/foxkehfan2328/Saitamaar_Hasei",
+      "size": [
+        { "type": "ttf", "size": 4001520 },
+        { "type": "otf", "size": 3001380 },
+        { "type": "woff", "size": 592512 },
+        { "type": "woff2", "size": 351648 }
+      ]
+    },
+    {
+      "id": 18,
+      "enable": true,
+      "name": "Saitamaar-Mini",
+      "author": "ぜりーさん",
+      "site_name": "Codeberg",
+      "site_url": "https://codeberg.org/foxkehfan2328/Saitamaar_Hasei",
+      "size": [
+        { "type": "ttf", "size": 2772988 },
+        { "type": "otf", "size": 2094988 },
+        { "type": "woff", "size": 402756 },
+        { "type": "woff2", "size": 231412 }
+      ]
     }
   ]
 }

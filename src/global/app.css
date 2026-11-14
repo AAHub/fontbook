@@ -981,3 +981,30 @@
   font-size: 12px;
   line-height: 14px;
 }
+
+/*
+  Saitamaar 派生 (Saitamaar Hasei。AA-PGothic の後継)
+  配布元 Codeberg Pages から直接読み込み。ファイルは同梱しない
+*/
+@font-face {
+  font-family: "Saitamaar-Shin";
+  src: url("https://foxkehfan2328.codeberg.page/Saitamaar_Hasei/Saitamaar%20Shin.woff2")
+    format("woff2");
+  font-display: swap;
+}
+.Saitamaar-Shin {
+  font-family: "Saitamaar-Shin";
+}
+@font-face {
+  font-family: "Saitamaar-Mini";
+  src: url("https://foxkehfan2328.codeberg.page/Saitamaar_Hasei/Saitamaar%20Mini.woff2")
+    format("woff2");
+  font-display: swap;
+}
+.Saitamaar-Mini {
+  font-family: "Saitamaar-Mini";
+}
+.Saitamaar-Mini.aa {
+  font-size: 12px;
+  line-height: 14px;
+}
