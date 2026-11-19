@@ -73,23 +73,34 @@ declare namespace LocalJSX {
     interface HighlightCodeLine {
         "lines"?: string;
     }
+
+    interface AppFontAttributes {
+        "id": string;
+    }
+    interface AppFontDetailAttributes {
+        "id": string;
+    }
+    interface HighlightCodeLineAttributes {
+        "lines": string;
+    }
+
     interface IntrinsicElements {
-        "app-font": AppFont;
-        "app-font-detail": AppFontDetail;
+        "app-font": Omit<AppFont, keyof AppFontAttributes> & { [K in keyof AppFont & keyof AppFontAttributes]?: AppFont[K] } & { [K in keyof AppFont & keyof AppFontAttributes as `attr:${K}`]?: AppFontAttributes[K] } & { [K in keyof AppFont & keyof AppFontAttributes as `prop:${K}`]?: AppFont[K] };
+        "app-font-detail": Omit<AppFontDetail, keyof AppFontDetailAttributes> & { [K in keyof AppFontDetail & keyof AppFontDetailAttributes]?: AppFontDetail[K] } & { [K in keyof AppFontDetail & keyof AppFontDetailAttributes as `attr:${K}`]?: AppFontDetailAttributes[K] } & { [K in keyof AppFontDetail & keyof AppFontDetailAttributes as `prop:${K}`]?: AppFontDetail[K] };
         "app-home": AppHome;
         "app-root": AppRoot;
-        "highlight-code-line": HighlightCodeLine;
+        "highlight-code-line": Omit<HighlightCodeLine, keyof HighlightCodeLineAttributes> & { [K in keyof HighlightCodeLine & keyof HighlightCodeLineAttributes]?: HighlightCodeLine[K] } & { [K in keyof HighlightCodeLine & keyof HighlightCodeLineAttributes as `attr:${K}`]?: HighlightCodeLineAttributes[K] } & { [K in keyof HighlightCodeLine & keyof HighlightCodeLineAttributes as `prop:${K}`]?: HighlightCodeLine[K] };
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "app-font": LocalJSX.AppFont & JSXBase.HTMLAttributes<HTMLAppFontElement>;
-            "app-font-detail": LocalJSX.AppFontDetail & JSXBase.HTMLAttributes<HTMLAppFontDetailElement>;
-            "app-home": LocalJSX.AppHome & JSXBase.HTMLAttributes<HTMLAppHomeElement>;
-            "app-root": LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
-            "highlight-code-line": LocalJSX.HighlightCodeLine & JSXBase.HTMLAttributes<HTMLHighlightCodeLineElement>;
+            "app-font": LocalJSX.IntrinsicElements["app-font"] & JSXBase.HTMLAttributes<HTMLAppFontElement>;
+            "app-font-detail": LocalJSX.IntrinsicElements["app-font-detail"] & JSXBase.HTMLAttributes<HTMLAppFontDetailElement>;
+            "app-home": LocalJSX.IntrinsicElements["app-home"] & JSXBase.HTMLAttributes<HTMLAppHomeElement>;
+            "app-root": LocalJSX.IntrinsicElements["app-root"] & JSXBase.HTMLAttributes<HTMLAppRootElement>;
+            "highlight-code-line": LocalJSX.IntrinsicElements["highlight-code-line"] & JSXBase.HTMLAttributes<HTMLHighlightCodeLineElement>;
         }
     }
 }
